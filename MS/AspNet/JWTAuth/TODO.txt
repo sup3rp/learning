@@ -1,0 +1,5 @@
+https://www.youtube.com/watch?v=4cFhYUK8wnc&ab_channel=MilanJovanovi%C4%87
+https://www.youtube.com/watch?v=v7q3pEK1EA0&ab_channel=PatrickGod
+https://www.macoratti.net/19/06/aspnc_jwtc1.htm
+jwt azure e postman -> https://www.c-sharpcorner.com/article/how-to-implement-jwt-authentication-in-web-api-using-net-6-0-asp-net-core/
+https://www.youtube.com/watch?v=kM1fPt1BcLc&ab_channel=CodewithJulian

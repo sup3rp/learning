@@ -1,0 +1,1 @@
+Factory pattern is a creational design pattern that solves the problem of creating object without exposing the creation logic to the client.
