@@ -61,6 +61,20 @@ Something something
           };
       }
   }
+
+  public class AmazonStreamService: IStreamService
+  {
+      public string[] ShowMovies()
+      {
+          return new string[]
+          {
+              "Movie A",
+              "Movie B",
+              "Movie C"
+          };
+      }
+  }
+
   ```
 
 <p>We now want to refactor the code, so that the client calling this service does not need to know the specifics of how this service is instantiated, that's where the Factory Pattern comes in handy.</p>
@@ -116,14 +130,51 @@ Something something
   }
   ```
 
-Something something:
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+
 
 ### Solve using the DI approach
-Something something
+
+We can go beyond and turn this code even more usable by using DI to solve any depedencies that both services that can come from the constructors. Let's update the <i>StreamFactory</i> class.
+
+  ```csharp
+public class StreamFactory
+{
+    private readonly IServiceProvider serviceProvider;
+
+    public StreamFactory(IServiceProvider serviceProvider)
+    {
+        this.serviceProvider = serviceProvider;
+    }
+    
+    public IStreamService GetStreamService(string userSelection)
+    {
+        if(userSelection =="Netflix")
+            return (IStreamService)serviceProvider.GetService(typeof(NetflixStreamService));
+        
+        return (IStreamService)serviceProvider.GetService(typeof(AmazonStreamService));
+    }
+    
+}
+```
+
+<p>Here we delegate the responsability to the <i>IServiceProvider</i> of getting the appropriate instance of the <i>IStreamService</i> with all the dependencies taken care, but in order for this to happen we need to register both services in the <i>Startup.cs</i> class.</p>
+
+```charp
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc();
+
+    services.AddScoped<StreamFactory>();
+    
+    services.AddScoped<NetflixStreamService>()
+                .AddScoped<IStreamService, NetflixStreamService>(s => s.GetService<NetflixStreamService>());
+                
+    services.AddScoped<AmazonStreamService>()
+                .AddScoped<IStreamService, AmazonStreamService>(s => s.GetService<AmazonStreamService>());
+}
+```
+
+<p>As of now, all future changes to the dependencies of the <i>NetflixStreamService</i> and <i>AmazonStreamService</i> classes (i.e. changes in the constructor) are automatically taken care by the DI at runtime. <b>Note:</b> All dependencies must be configured with DI as well.</p>
 
 ## Conclusion
-Something something
+The Factory Pattern is a good pattern if we don't want to expose the client to the details of how to instantiate certain classes. We might go even further and make it more reusable by making the DI take care of all dependencies that come from the classes that the Factory is responsible for instantiating.
