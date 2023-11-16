@@ -35,7 +35,7 @@
 
 <!-- TRADITIONAL APPROACH -->
 ## Traditional vs DI approach
-Something something
+
 ### The original problem
 <p>Taking a real world example from the source article, let's say we have service contract for a stream service which exposes a <i>ShowMovies</i> method.</p>
 
@@ -159,7 +159,7 @@ public class StreamFactory
 
 <p>Here we delegate the responsability to the <i>IServiceProvider</i> of getting the appropriate instance of the <i>IStreamService</i> with all the dependencies taken care, but in order for this to happen we need to register both services in the <i>Startup.cs</i> class.</p>
 
-```charp
+```csfharp
 public void ConfigureServices(IServiceCollection services)
 {
     services.AddMvc();
