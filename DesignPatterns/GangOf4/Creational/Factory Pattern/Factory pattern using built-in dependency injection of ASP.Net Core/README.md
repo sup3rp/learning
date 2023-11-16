@@ -1,11 +1,9 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="#">
-    <img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.freepik.com%2Fpremium-vector%2Ffactory-logo-design-industry-logo-template_30854332.htm&psig=AOvVaw3CB-79cjQt4hr1AtM_lfkc&ust=1700223977948000&source=images&cd=vfe&ved=0CBEQjRxqFwoTCLjnyoTCyIIDFQAAAAAdAAAAABAE" alt="Logo" width="80" height="80">
-  </a>
+  
 
-  <h3 align="center">Factory pattern using Dependency Injection (DI) in order to resolve dependencies.</h3>
+  <h3 align="center">Factory pattern 🏭 using Dependency Injection (DI) in order to resolve dependencies.</h3>
   
   <p>Followed instructions from https://medium.com/null-exception/factory-pattern-using-built-in-dependency-injection-of-asp-net-core-f91bd3b58665
 </p>
