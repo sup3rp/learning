@@ -64,14 +64,32 @@ There are various types of web APIs, each with its own characteristics and use c
 <ol>
    <li><b>Use nouns, not verbs - </b> Verbs should not be used in endpoint paths. Instead, the pathname should contain the nouns that identify the object to which the endpoint we are accessing or altering belongs. For example, instead of using <i>/getAllClients</i> to fetch all clients, use  <i>/clients</i>.</li>
    <li><b>Use plural resource nouns - </b>Use the plural form for resource nouns because this fits all types of endpoints. For example, instead of using <i>/employee/:id/</i>, use <i>/employees/:id/</i>.</li>
-   <li><b>Consistency is key - </b> </li>
-   <li><b>KISS - </b> </li>
-   <li><b>Make use of HTTP Status Codes - </b> </li>
-   <li><b>Return JSON, not plain text! - </b> </li>
-   <li><b>Handle errors - </b> </li>
-   <li><b>Security - </b> </li>
-   <li><b>Incorporate pagination - </b> </li>
-   <li><b>Versioning - </b> </li>
+   <li><b>Consistency is key - </b> Created a robust, predictable and consistent API that clients can use. This will allow client side development to be more quick and less error prune.</li>
+   <li><b>Resource oriented - </b>Endpoints should be resource-oriented. For example, if you want to design an API for users: <i>/users</i> will return all users, <i>/users/124</i> will return the resource 124 from users</li>, <i>/users/124?page=1&page_size=10</i> will return the resource 124 from users with pagination, requesting page 1 with an offset of 10.
+   <li><b>Make use of HTTP Status Codes - </b> This is one is really important. We should always return HTTP status codes as this is an industry standard. This is even more important if we are designing an API to be used by clients that we don't develop. The status codes should be used for the same outcomes across the API:
+    <ol>
+      <li>200 for general success.</li>
+      <li>201 for successful creation.</li>
+      <li>202 for a successful request.</li>
+      <li>204 for no content.</li>
+      <li>307 for redirected content.</li>
+      <li>400 for bad requests.</li>
+      <li>401 for unauthorized requests.</li>
+      <li>403 for missing permissions.</li>
+      <li>404 for lacking resources.</li>
+      <li>500 for internal errors.</li>
+      <li>501 for not implemented.</li>
+      <li>502 for bad gateway.</li>
+      <li>503 for service unavailable.</li>
+      <li>504 for gateway timeout.</li>
+    </ol>
+   </li>
+   <li><b>Return JSON, not plain text! - </b> REST APIs should accept and return JSON as this is the standard in the industry. JSON is a type of data structure that will aid clients and servers processing requests.</li>
+   <li><b>Handle errors - </b> Return codes between 400 and 5xx and return details in the response body along with the status code.</li>
+   <li><b>Security - </b> Use SSL/TLS, API keys.</li>
+   <li><b>Incorporate pagination - </b> Design for the future, included pagination whenever you need to return a lot of resources. Use <i>page</i> and <i>page_size</i> as arguments.</li>
+   <li><b>Versioning - </b> Design for the future, predicting that the API must be retrocompatible sometime in the future, design from day 1 an API that can allow versioning. For example <i>api/v1/products/124</i>.</li>
+   <li><b>Documentation - </b> Use proper standards like OpenAPI definition, use tools as Swagger, Postman and Stoplight.</li>
 </ol>
 
 ### The X social network API case study 
