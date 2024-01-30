@@ -20,6 +20,7 @@ Some sources:
   <ol>
     <li><a href="#the-original-problem">What is an API?</a></li>
     <li><a href="#solve-using-the-traditional-approach">Different types of APIs</a></li>
+    <li><a href="#solve-using-the-traditional-approach">Different types of Web APIs</a></li>
     <li><a href="#solve-using-the-di-approach">REST</a></li>
     <li><a href="#solve-using-the-di-approach">RPC</a></li>
     <li><a href="#solve-using-the-di-approach">SOAP</a></li>
@@ -30,10 +31,21 @@ Some sources:
 
 <!-- What is an API? -->
 ## What is an API?
-<p align="center">A factory pattern belongs to the creational patterns from Gang of 4. It is a creational design pattern that solves the problem of creating object without exposing the creation logic to the client. </p>
+<p align="center">API stands for Application Programming Interface. It is a set of rules and tools that allows different software applications to communicate with each other. APIs define the methods and data formats that applications can use to request and exchange information. They provide a way for developers to access the functionality of a software component or service without having to understand its internal workings.</p>
 
 <!-- Different types of APIs -->
 ## Different types of APIs
+
+APIs can be categorized into different types, including:
+<ol>
+    <li><b>Web APIs (or HTTP APIs):</b> These APIs enable communication over the web using standard protocols such as HTTP. REST (Representational State Transfer) and GraphQL are common styles of web APIs.</li>
+    <li><b>Library APIs:</b> These APIs provide a set of functions or procedures that can be called by a program, allowing developers to use pre-built functionality without having to write the code from scratch.</li>
+    <li><b>Operating System APIs: </b>These APIs provide a way for software applications to interact with the underlying operating system, accessing resources such as files, memory, and hardware devices.</li>
+  </ol>
+
+<!-- Different types of Web APIs -->
+## Different types of Web APIs
+There are various types of web APIs, each with its own characteristics and use cases. The main types of web APIs are RESTful APIs, RPC, SOAP, WebSocket and GraphQL APIs.
 
 <!-- REST -->
 ## REST
@@ -46,4 +58,7 @@ Some sources:
 
 <!-- WebSocket -->
 ## WebSocket
+
+<!-- GraphQL -->
+## GraphQL
 
