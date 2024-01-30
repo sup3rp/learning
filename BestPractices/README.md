@@ -22,7 +22,28 @@ Some sources:
     <li><a href="#solve-using-the-traditional-approach">Different types of APIs</a></li>
     <li><a href="#solve-using-the-di-approach">REST</a></li>
     <li><a href="#solve-using-the-di-approach">RPC</a></li>
+    <li><a href="#solve-using-the-di-approach">SOAP</a></li>
     <li><a href="#solve-using-the-di-approach">WebSocket</a></li>
     <li><a href="#conclusion">Conclusion</a></li>
   </ol>
 </details>
+
+<!-- What is an API? -->
+## What is an API?
+<p align="center">A factory pattern belongs to the creational patterns from Gang of 4. It is a creational design pattern that solves the problem of creating object without exposing the creation logic to the client. </p>
+
+<!-- Different types of APIs -->
+## Different types of APIs
+
+<!-- REST -->
+## REST
+
+<!-- RPC -->
+## RPC
+
+<!-- SOAP -->
+## SOAP
+
+<!-- WebSocket -->
+## WebSocket
+
