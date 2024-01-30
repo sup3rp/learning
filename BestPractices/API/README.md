@@ -51,28 +51,28 @@ There are various types of web APIs, each with its own characteristics and use c
 <!-- REST -->
 ## REST
 
-
-
-
-### Use nouns, not verbs
-
-### Use plural resource nouns
-
-### Consistency is key
-
-### KISS
-
-### Make use of HTTP Status Codes
-
-### Return JSON, not plain text!
-
-### Handle errors
-
-### Security
-
-### Incorporate pagination
-
-### Versioning
+### What is REST?
+<p>RESTful APIs (Representational State Transfer) - The most used type of Web API, uses HTTP and it allows web apps to communicate in a client - server approach, where the server provides the client with the API. This type of API was first intented to be stateless, meaning the server does not save the state of the client, and also is very open to interpretation, which allows a great level of freedom but also a lot of opportunities to design an inconsistent/bad API.</p>
+<p>Analysis:</p>
+<ol>
+   <li><b> Architecture Style - </b> REST is an architectural style that follows a set of constraints and principles, such as statelessness and uniform interface.</li>
+   <li><b> Communication - </b> RESTful APIs use standard HTTP methods (GET, POST, PUT, DELETE) for communication. Each resource is identified by a unique URL.</li>
+   <li><b> Data Format - </b> Commonly use JSON as the data format, but XML is also supported.</li>
+   <li><b> Statelessness - </b> Each request from a client to a server must contain all the information needed to understand and fulfill the request. The server does not store the client's state between requests.</li>
+</ol>
+<p>Standards/Best practices:</p>
+<ol>
+   <li><b>Use nouns, not verbs - </b> Verbs should not be used in endpoint paths. Instead, the pathname should contain the nouns that identify the object to which the endpoint we are accessing or altering belongs. For example, instead of using <i>/getAllClients</i> to fetch all clients, use  <i>/clients</i>.</li>
+   <li><b>Use plural resource nouns - </b>Use the plural form for resource nouns because this fits all types of endpoints. For example, instead of using <i>/employee/:id/</i>, use <i>/employees/:id/</i>.</li>
+   <li><b>Consistency is key - </b> </li>
+   <li><b>KISS - </b> </li>
+   <li><b>Make use of HTTP Status Codes - </b> </li>
+   <li><b>Return JSON, not plain text! - </b> </li>
+   <li><b>Handle errors - </b> </li>
+   <li><b>Security - </b> </li>
+   <li><b>Incorporate pagination - </b> </li>
+   <li><b>Versioning - </b> </li>
+</ol>
 
 ### The X social network API case study 
 
