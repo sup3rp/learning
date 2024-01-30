@@ -32,6 +32,7 @@ Some sources:
 <!-- What is an API? -->
 ## What is an API?
 <p align="center">API stands for Application Programming Interface. It is a set of rules and tools that allows different software applications to communicate with each other. APIs define the methods and data formats that applications can use to request and exchange information. They provide a way for developers to access the functionality of a software component or service without having to understand its internal workings.</p>
+<p>In this article, I'll focus more on Web APIs, since that is the main type I work with.</p>
 
 <!-- Different types of APIs -->
 ## Different types of APIs
