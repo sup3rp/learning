@@ -18,21 +18,21 @@ Some sources:
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#the-original-problem">What is an API?</a></li>
-    <li><a href="#solve-using-the-traditional-approach">Different types of APIs</a></li>
-    <li><a href="#solve-using-the-traditional-approach">Different types of Web APIs</a></li>
-    <li><a href="#solve-using-the-di-approach">REST</a></li>
-    <li><a href="#solve-using-the-di-approach">RPC</a></li>
-    <li><a href="#solve-using-the-di-approach">SOAP</a></li>
-    <li><a href="#solve-using-the-di-approach">WebSocket</a></li>
+    <li><a href="#what-is-an-api?">What is an API?</a></li>
+    <li><a href="#different-types-of-apis">Different types of APIs</a></li>
+    <li><a href="#different-types-of-web-apis">Different types of Web APIs</a></li>
+    <li><a href="#rest">REST</a></li>
+    <li><a href="#rpc">RPC</a></li>
+    <li><a href="#soap">SOAP</a></li>
+    <li><a href="#websocket">WebSocket</a></li>
     <li><a href="#conclusion">Conclusion</a></li>
   </ol>
 </details>
 
 <!-- What is an API? -->
 ## What is an API?
-<p align="center">API stands for Application Programming Interface. It is a set of rules and tools that allows different software applications to communicate with each other. APIs define the methods and data formats that applications can use to request and exchange information. They provide a way for developers to access the functionality of a software component or service without having to understand its internal workings.</p>
-<p>In this article, I'll focus more on Web APIs, since that is the main type I work with.</p>
+<p align="center">API stands for Application Programming Interface. It is a set of engineering standards, rules and tools that allows different software applications to be buil to communicate with each other. APIs define the methods and data formats that applications can use to request and exchange information. They provide a way for developers to access the functionality of a software component or service without having to understand its internal workings.</p>
+<p>As a webdeveloper I'll focus more on APIs designed for web apps, since that is the main type I work with. Let's us focus on creating a guideline that we can follow whenever we need to create an API.</p>
 
 <!-- Different types of APIs -->
 ## Different types of APIs
@@ -50,6 +50,32 @@ There are various types of web APIs, each with its own characteristics and use c
 
 <!-- REST -->
 ## REST
+
+
+
+
+### Use nouns, not verbs
+
+### Use plural resource nouns
+
+### Consistency is key
+
+### KISS
+
+### Make use of HTTP Status Codes
+
+### Return JSON, not plain text!
+
+### Handle errors
+
+### Security
+
+### Incorporate pagination
+
+### Versioning
+
+### The X social network API case study 
+
 
 <!-- RPC -->
 ## RPC
