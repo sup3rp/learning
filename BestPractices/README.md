@@ -18,17 +18,11 @@ Some sources:
 <details>
   <summary>Table of Contents</summary>
   <ol>
-    <li><a href="#the-factory-pattern">The Factory Pattern</a></li>
-    <li>
-      <a href="#traditional-vs-di-approach">Traditional vs DI approach</a>
-      <ul>
-        <li><a href="#the-original-problem">The original problem</a></li>
-        <li><a href="#solve-using-the-traditional-approach">Solve using the traditional approach</a></li>
-        <li><a href="#solve-using-the-di-approach">REST</a></li>
-        <li><a href="#solve-using-the-di-approach">RPC</a></li>
-        <li><a href="#solve-using-the-di-approach">WebSocket</a></li>
-      </ul>
-    </li>
+    <li><a href="#the-original-problem">What is an API?</a></li>
+    <li><a href="#solve-using-the-traditional-approach">Different types of APIs</a></li>
+    <li><a href="#solve-using-the-di-approach">REST</a></li>
+    <li><a href="#solve-using-the-di-approach">RPC</a></li>
+    <li><a href="#solve-using-the-di-approach">WebSocket</a></li>
     <li><a href="#conclusion">Conclusion</a></li>
   </ol>
 </details>
