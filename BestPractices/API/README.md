@@ -2,7 +2,7 @@
 <br />
 <div align="center">
   <h3 align="center">🏭 API Best Practices. 🏭</h3>
-<div>
+</div>
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
