@@ -2,12 +2,7 @@
 <br />
 <div align="center">
   <h3 align="center">🏭 API Best Practices. 🏭</h3>
-  <p>Sources: </p>
-  <p>https://medium.com/@techworldwithmilan/rest-api-design-best-practices-2eb5e749d428 </p>
-  <p>https://blog.dreamfactory.com/best-practices-for-naming-rest-api-endpoints/</p>
-  <p>https://www.mulesoft.com/sem/lp/whitepaper/api/design-apis?&utm_source=google&utm_medium=cpc&utm_campaign=fy24-g-mash-south-search-api-design&utm_term=api%20design%20best%20practices </p>
-</div>
-
+<div>
 <!-- TABLE OF CONTENTS -->
 <details>
   <summary>Table of Contents</summary>
@@ -106,3 +101,10 @@ There are various types of web APIs, each with its own characteristics and use c
 <!-- GraphQL -->
 ## GraphQL
 
+<div>
+  <p>Sources: </p>
+  <p>https://medium.com/@techworldwithmilan/rest-api-design-best-practices-2eb5e749d428 </p>
+  <p>https://blog.dreamfactory.com/best-practices-for-naming-rest-api-endpoints/</p>
+  <p>https://www.mulesoft.com/sem/lp/whitepaper/api/design-apis?&utm_source=google&utm_medium=cpc&utm_campaign=fy24-g-mash-south-search-api-design&utm_term=api%20design%20best%20practices </p>
+  <p>https://medium.com/@jeslurrahman/14-best-practices-for-designing-restful-apis-net-core-web-api-1f34d6b8303e</p>
+</div>
