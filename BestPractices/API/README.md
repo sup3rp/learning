@@ -1,9 +1,3 @@
-TODO: Sum up the best practices for API design 
-Some sources: 
-
-&utm_content=g-p-c&d=7013y000002O1f0AAC&nc=7013y000002O1WqAAK&gad_source=1&gclid=Cj0KCQiAwbitBhDIARIsABfFYIJPUdi-T95fA-aEZdwqPQPMkKmJT9C1TiYSvgqGyOMJxZc_0fLuL1UaAjuWEALw_wcB&gclsrc=aw.ds
-
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -62,10 +56,11 @@ There are various types of web APIs, each with its own characteristics and use c
 </ol>
 <p>Standards/Best practices:</p>
 <ol>
-   <li><b>Use nouns, not verbs - </b> Verbs should not be used in endpoint paths. Instead, the pathname should contain the nouns that identify the object to which the endpoint we are accessing or altering belongs. For example, instead of using <i>/getAllClients</i> to fetch all clients, use  <i>/clients</i>.</li>
+   <li><b>Use nouns, not verbs - </b> The core idea to retain here is that nouns must be used and verbs must be avoided in the endpoint paths, because they already exist in the HTTP method (GET, POST, PUT, PATCH, DELETE). Instead, the pathname should only contain the target of the request, so use nouns that identify the resource that we want to target. For example, instead of using <i>GET: /getAllClients</i> to fetch all clients, use  <i>GET: /clients</i>.</li>
    <li><b>Use plural resource nouns - </b>Use the plural form for resource nouns because this fits all types of endpoints. For example, instead of using <i>/employee/:id/</i>, use <i>/employees/:id/</i>.</li>
    <li><b>Consistency is key - </b> Created a robust, predictable and consistent API that clients can use. This will allow client side development to be more quick and less error prune.</li>
    <li><b>Resource oriented - </b>Endpoints should be resource-oriented. For example, if you want to design an API for users: <i>/users</i> will return all users, <i>/users/124</i> will return the resource 124 from users</li>, <i>/users/124?page=1&page_size=10</i> will return the resource 124 from users with pagination, requesting page 1 with an offset of 10.
+   <li><b>Nesting resources - </b> When designing an API, it might make sense to group those that contain associated information. If one object can contain another object, we should design an API that reflect that. This is a good practice even if (and specially because) it does not mirror your database tables/relationships (which honestly just makes the job easier to hackers) and allows the clients to easily retrive/create/change related resources. For example, <i>/api/v1/posts/124/comments</i>.</li>
    <li><b>Make use of HTTP Status Codes - </b> This is one is really important. We should always return HTTP status codes as this is an industry standard. This is even more important if we are designing an API to be used by clients that we don't develop. The status codes should be used for the same outcomes across the API:
     <ol>
       <li>200 for general success.</li>
@@ -86,10 +81,14 @@ There are various types of web APIs, each with its own characteristics and use c
    </li>
    <li><b>Return JSON, not plain text! - </b> REST APIs should accept and return JSON as this is the standard in the industry. JSON is a type of data structure that will aid clients and servers processing requests.</li>
    <li><b>Handle errors - </b> Return codes between 400 and 5xx and return details in the response body along with the status code.</li>
+   
+   <li><b>Service evolution - </b> A well-design API should evolve independently of its clients, this allows it to rollout new features without introducing breaking changes that might affect clients. In order to do this we must introduce versioning, backward compatibility and discoverability (allow clients to discover new endpoints through resource linking and documentation) </li>
+   <li><b>Incorporate filtering, sortign and pagination - </b> Design for the future, include filtering, sorting and pagination whenever you need to return a set of items. Use <i>sort=X:asc</i> or <i>sort=X:desc</i>, <i>page=x</i> and <i>page_size=x</i> in the url arguments. For example, <i>/api/v1/posts/124/comments?page=1&page_size=10&sort=createdAt:desc&country=PT</i>.</li>
+   <li><b>Versioning - </b> Design for the future, predicting that the API must be retrocompatible sometime in the future, design from day 1 an API that can allow versioning. Remember that y For example <i>api/v1/products/124</i>.</li>
+   <li><b>Caching - </b> Consider caching some of the results that don't change to often in order to boost performance and scalability.</li>
    <li><b>Security - </b> Use SSL/TLS, API keys.</li>
-   <li><b>Incorporate pagination - </b> Design for the future, included pagination whenever you need to return a lot of resources. Use <i>page</i> and <i>page_size</i> as arguments.</li>
-   <li><b>Versioning - </b> Design for the future, predicting that the API must be retrocompatible sometime in the future, design from day 1 an API that can allow versioning. For example <i>api/v1/products/124</i>.</li>
-   <li><b>Documentation - </b> Use proper standards like OpenAPI definition, use tools as Swagger, Postman and Stoplight.</li>
+   <li><b>Rate limiting - </b> In order to prevent abuse or a infine loop bug from the clients that migh trigger a huge amount of requests it is a standard practice to implement rate limiting in an API, commonly signaled by the HTTP status code 429 Too Many Requests.</li>
+   <li><b>Documentation - </b> Use proper standards like OpenAPI definition, use tools like Swagger, Postman and Stoplight.</li>
 </ol>
 
 ### The X social network API case study 
